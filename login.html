@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginform" class="container" >
+            <form id="loginForm">
+                <h2>Login Form</h2>
+                <input type="text" id="username" placeholder="username">
+    
+                <input type="password" id="password" placeholder="Password">
+    
+                <button class="submit" type="button" onclick="login()">Login</button><br>
+                <div class="linkDiv">
+                    <div class="link-content">
+                        <a href="#" class="link">Forgot Password?</a><br>
+                    </div>
+                    <div class="link-content">
+                        <a id="signupbtn" href="#" class="link" style="color: blue;">Don't have an account? Create Account</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="signupform" class="container" style="display: none;">
+            <form id="signupForm">
+                <h2>Sign Up Form</h2>
+                <input type="text" id="fullName" placeholder="Your Full Name" required>
+
+                <input type="email" id="email" placeholder="Your Email" required>
+
+                <input type="password" id="newPassword" placeholder="Enter a new password" required>
+
+                <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+
+                <button type="button" class="submit" onclick="signup()">Sign Up</button><br/>
+
+                <div class="link-content">
+                    <a id="loginbtn" href="#" class="link" style="color: blue; ">Already have an account? Log in</a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <script >
+        const loginDiv=document.getElementById("loginform"); 
+        const signupDiv=document.getElementById("signupform");
+
+        const loginbtn=document.getElementById("loginbtn");
+        const signupbtn=document.getElementById("signupbtn");
+
+        loginbtn.onclick=function(){
+            loginDiv.style.display="block";
+            signupDiv.style.display="none";
+        }
+
+        signupbtn.onclick=function(){
+            loginDiv.style.display="none";
+            signupDiv.style.display="block";
+        }
+    </script>
+</body>
+</html>

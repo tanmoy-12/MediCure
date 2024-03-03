@@ -1,0 +1,573 @@
+/******************************** GOOGLE FONTS ***********************************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+
+
+/************************** CSS STYLINGS FOR GENERAL STRUCTURE OF THE WEBPAGE ********************/
+:root {
+    --primary-color: #28bf96;
+    --primary-color-dark: #209677;
+    --text-dark: #111827;
+    --text-light: #6b7280;
+    --white: #ffffff;
+}
+
+#mobile-view{
+    display: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/************************************ CSS STYLINGS FOR NAVBAR ********************************/
+
+
+nav {
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav__logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.nav__links a:hover{
+    color: #003b2c;
+    font-size: large;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+}
+
+
+
+/******************************** CSS STYLINGS FOR HEADER ELEMENT ***********************************/
+
+.header {
+    padding: 0 1rem;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.content h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.content h1 span {
+    font-weight: 400;
+}
+
+.content p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    line-height: 1.75rem;
+    text-align: justify;
+}
+
+.image {
+    position: relative;
+    text-align: center;
+    isolation: isolate;
+}
+
+.image__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    width: 450px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.image img {
+    width: 100%;
+    max-width: 475px;
+}
+
+.image__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image__content__1 {
+    transform: translate(calc(-50% + 7rem), calc(-50% + 2rem));
+}
+
+.image__content__1 span {
+    padding: 10px 12px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background-color: #defcf4;
+    border-radius: 100%;
+}
+
+.image__content__1 h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.image__content__1 p {
+    color: var(--text-light);
+}
+
+.image__content__2 {
+    transform: translate(calc(-50% + 8rem), calc(-50% + 10rem));
+}
+
+.image__content__2 ul {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.image__content__2 li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: var(--text-light);
+}
+
+.image__content__2 span {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+
+
+
+/******************************** CSS STYLINGS FOR ABOUT US ELEMENT ***********************************/
+
+.about-us {
+    margin: 50px 0;
+}
+
+.about-us-content {
+    width: 100%;
+    margin: 30px auto;
+    padding: 50px 60px;
+    background-color: #f8f8f8;
+}
+
+.about-us h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+    margin: 15px auto;
+    text-align: justify;
+}
+
+
+
+
+/******************************** CSS STYLINGS FOR INSURANCE ELEMENT ***********************************/
+
+.container-insurance{
+    padding: 30px 0;
+}
+
+.insurance{
+    background-color: #dcedf8;
+    padding: 20px;
+    margin: 30px auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insurance p{
+    margin: 20px auto;
+}
+
+.insurance ul{
+    padding: 10px 20px;
+}
+
+.insurance li{
+    font-size:  20px;
+    font-weight: 500;
+}
+
+
+
+/******************************** CSS STYLINGS FOR SERVICES ELEMENT ***********************************/
+
+.services{
+    padding: 20px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.services-main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.service-container{
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #cdfff4;
+    box-shadow: 7px 6px 6px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 20px;
+    height: 300px;
+}
+
+.up{
+    font-size: 54px;
+    padding: 8px;
+}
+
+.down p{
+    padding: 10px;
+    text-align: justify;
+    font-size: large;
+    font-weight: 400;
+    color: #00295e;
+}
+
+
+/******************************** CSS STYLINGS FOR GREETING ELEMENT ***********************************/
+
+.greet-container {
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    height: 180px;
+    padding: 25px;
+    background-image: url("https://images.pexels.com/photos/5340280/pexels-photo-5340280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    color: rgb(0, 45, 63);
+    z-index: 0; 
+}
+
+.greet-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); 
+    z-index: -1; 
+}
+
+
+
+
+/******************************** CSS STYLINGS FOR CONTACTS ELEMENT ***********************************/
+
+.contact-parent-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 70px auto;
+}
+
+.contact{
+    padding: 20px 15px;
+    border-radius: 12px;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    background-color: #d5dfe0c9;
+    box-shadow: 7px 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+input{
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: large;
+    font-weight: 400;
+    border-radius: 8px;
+    width: 90%;
+    margin: 15px;
+}
+
+.message{
+    height: 260px;
+    width: 90%;
+    padding: 10px;
+    margin: none;
+    outline: none;
+    font-size: large;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    border-radius: 8px;
+}
+
+.submit{
+    margin: 20px 0;
+    padding: 6px;
+    width: 120px;
+    height: 40px;
+    font-size: large;
+    font-weight: 600;
+    background-color: #00275a;
+    color:#ffff;
+    border: none;
+    border-radius: 8px;
+    transition: all ease 1s;
+}
+
+.submit:hover{
+    box-shadow: 7px 6px 6px 0px rgba(0, 0, 0, 0.2);
+    background-color: #0046a1;
+}
+
+
+/******************************** CSS STYLINGS FOR FOOTER ELEMENT ***********************************/
+
+.footer-container {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    color: #666;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.footer-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+
+
+/******************************** CSS STYLINGS FOR SMALL LAPTOP VIEW ***********************************/
+
+
+@media screen and (max-width:1224px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content{
+        width: 85%;
+    }
+
+    .about-us-content{
+        width: 90%;
+    }
+
+    .insurance{
+        width: 90%;
+    }
+}
+
+
+
+/******************************** CSS STYLINGS FOR TABLET VIEW ***********************************/
+
+@media screen and (max-width:800px) {
+
+    #pc-view{
+        display: none;
+    }
+
+    #mobile-view{
+        display: flex;
+    }
+
+    .nav-head{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+/******************************** CSS STYLINGS FOR TABLET POTRAIT VIEW ***********************************/
+
+@media screen and (max-width:550px) {
+
+    .nav__links {
+        gap: 0.7rem;
+    }
+
+    .nav-head{
+        padding: 3px;
+    }
+
+    .image__bg{
+        display: none;
+    }
+
+    .image__content__2{
+        display: none;
+    }
+
+    .image__content__1 {
+        transform: translate(calc(-50% + 6rem), calc(-50% + 6rem));
+    }
+
+    .details h4{
+        font-size: medium;
+    }
+
+    .details p{
+        font-size: small;
+    }
+
+    .about-us-content{
+        padding: 20px;
+    }
+
+    .about-us-content p{
+        font-size: medium;
+    }
+
+    .insurance li{
+        font-size: medium;
+        text-align: justify;
+    }
+
+    .contact{
+        width: 350px;
+    }
+}
+
+
+
+/******************************** CSS STYLINGS FOR MOBILE VIEW ***********************************/
+
+@media screen and (max-width:390px) {
+
+    nav{
+        padding:10px 3px;
+    }
+
+    .nav__links {
+        gap: 0.6rem;
+        font-size: small;
+    }
+
+    .nav-head{
+        padding: 3px;
+    }
+
+    .btn{
+        padding: 12px;
+        font-size: medium;
+    }
+
+    .contact{
+        width: 290px;
+    }
+}
+
+
+
