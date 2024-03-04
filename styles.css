@@ -598,6 +598,10 @@ input{
         padding: 3px;
     }
 
+    .search-bar{
+        width: 90%;
+    }
+
     .image__bg{
         display: none;
     }
