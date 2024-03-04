@@ -44,6 +44,9 @@
 
 ## 🙌 Overview
 
+<img src="image/full.png"><br>
+
+
 - In the landing page user can see the stats and interect with some features
 - User can navigate to sections like-**Signin**,**Signup**, **About Us**,**Insurance Schemes**,**Services Offered**,**Contact**.
 - After clicking on **Registration** button the user will be redirected to login page
