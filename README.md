@@ -58,10 +58,12 @@
 
 <ul>
   <li>Get In Touch Functionality: The submit button click event listener captures user input (name, phone number, email, and message) from the contact form. It constructs a mailto link with the user's information and the recipient's email address. Upon clicking the submit button, the function redirects the user to their default email client with the pre-filled message, allowing them to contact the MEDIcure team easily. Here I implemented this "Get in Touch" without using any backend technology. It is simply created by using javascript and SMTP protocol where the customer query will be directly send to the provided mail id.</li>
+  <img src="image/contact.png">
   <li>Navigation Links: Event listeners are added to the navigation links to enable smooth scrolling to different sections of the webpage. When users click on a navigation link, the page scrolls smoothly to the corresponding section.</li>
+  <img src="image/nav.png">
 </ul>
 
-<img src="image/contact.png">
+
 
 <h2>Special Focus: Get In Touch Feature</h2>
 <p>The "Get In Touch" feature allows users to contact the MEDIcure team directly from the web application. It enhances user engagement and facilitates communication between users and the application creators. The JavaScript function associated with this feature simplifies the process of submitting inquiries or concerns, making it convenient for users to reach out to the MEDIcure team.</p>
