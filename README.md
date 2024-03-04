@@ -3,9 +3,7 @@
 
 <p>This README provides a comprehensive overview of the structure, implementation, and functionality of the MEDIcure demo project, developed using HTML, CSS, and JavaScript.</p>
 
-<video width="320" height="240" controls>
-  <source src="overview.mp4" type="video/mp4">
-</video>
+https://github.com/tanmoy-12/MediCure/assets/146607626/1bb36ee6-f4f0-48a1-985a-adfa77d9f090
 
 ## ⏭Roadmap
 - [x] landing page
