@@ -3,7 +3,8 @@
 
 <p>This README provides a comprehensive overview of the structure, implementation, and functionality of the MEDIcure demo project, developed using HTML, CSS, and JavaScript.</p>
 
-<video src="https://youtu.be/QiqyNJMg1rc"></video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QiqyNJMg1rc" frameborder="0" allowfullscreen></iframe>
+
 
 ## ⏭Roadmap
 - [x] landing page
