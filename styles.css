@@ -92,6 +92,52 @@ nav {
 
 
 
+/******************************** CSS STYLINGS FOR SEARCH BAR ELEMENT ***********************************/
+
+.search-container{
+    background-color: #28bf96;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar{
+    width: 600px;
+    height: 49px;
+    padding: 5px 10px;
+    font-size: large;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.search-button{
+    width: 45px;
+    border: none;
+    color: #0F2167;
+    font-size: x-large;
+    font-weight: 600;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-button:hover{
+    background-color: #00275a;
+    color: #ffffff;
+}
+
+.search-bar:focus{
+    border: none;
+    outline: 1px #00275a;
+}
+
+
 /******************************** CSS STYLINGS FOR HEADER ELEMENT ***********************************/
 
 .header {
@@ -233,6 +279,11 @@ nav {
 }
 
 
+/******************************** CSS STYLINGS FOR AD IMAGE ***********************************/
+
+.image-ad img{
+    width: 100%;
+}
 
 
 /******************************** CSS STYLINGS FOR INSURANCE ELEMENT ***********************************/
@@ -340,6 +391,43 @@ nav {
     background-color: rgba(255, 255, 255, 0.5); 
     z-index: -1; 
 }
+
+
+
+/******************************** CSS STYLINGS FOR FAQs ***********************************/
+
+
+.faq-container {
+    max-width: 800px;
+    margin: 90px auto;
+}
+
+.faq-container h2{
+    margin: 20px auto;
+}
+
+details {
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+details p{
+    padding: 10px 0 0 20px;
+}
+
+summary {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+details[open] {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
 
 
 
@@ -457,6 +545,10 @@ input{
     .insurance{
         width: 90%;
     }
+
+    .faq-container{
+        width: 90%;
+    }
 }
 
 
@@ -486,6 +578,10 @@ input{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .faq-container{
+        max-width: 87%;
     }
 }
 

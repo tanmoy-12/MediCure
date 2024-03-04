@@ -72,3 +72,19 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
     });
 });
+
+
+
+// script.js
+const faqItems = document.querySelectorAll('details');
+
+faqItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        // Close other open FAQ items
+        faqItems.forEach((otherItem) => {
+            if (otherItem !== item) {
+                otherItem.removeAttribute('open');
+            }
+        });
+    });
+});
