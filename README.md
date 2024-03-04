@@ -61,6 +61,8 @@
   <li>Navigation Links: Event listeners are added to the navigation links to enable smooth scrolling to different sections of the webpage. When users click on a navigation link, the page scrolls smoothly to the corresponding section.</li>
 </ul>
 
+<img src="images/contact.png">
+
 <h2>Special Focus: Get In Touch Feature</h2>
 <p>The "Get In Touch" feature allows users to contact the MEDIcure team directly from the web application. It enhances user engagement and facilitates communication between users and the application creators. The JavaScript function associated with this feature simplifies the process of submitting inquiries or concerns, making it convenient for users to reach out to the MEDIcure team.</p>
 
