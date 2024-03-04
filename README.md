@@ -14,16 +14,25 @@
 - [x] Integrate Get In Touch functionality using JS and SMTP Protocol
 - [x] Deploy on GITHUB PAGES
 
+## 🛠️Tech Stack
+
+- <img src="https://clipartcraft.com/images/html5-logo-png-transparent-5.png" height=30px width=50px > **HTML 5** - for building the frontend  <br> 
+- <img src = "https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png" height=30px width=30px>**CSS** - For UI component <br>
+- <img src="https://seeklogo.com/images/F/font-awesome-logo-6E69605A6D-seeklogo.com.png" height=30px width=50px/>**Font Awesome**- For UI ICON <br>
+- <img src = "https://1000logos.net/wp-content/uploads/2020/09/JavaScript-Logo-2048x1280.png" height=40px width=40px> **Javascript**- for Element Functionality <br>
+- <img src = "https://pngimg.com/uploads/github/github_PNG28.png" height=40px width=40px> **Github Pages**- For Project Deployment<br>
+
 <h2>HTML Structure</h2>
 <p>The HTML file (index.html) forms the structure of the MEDIcure web application. It comprises various sections, each serving a specific purpose:</p>
 
 <ul>
   <li>Navigation Bar: The navigation bar contains links to different sections of the application and includes buttons for user registration.</li>
+  <li>Search Bar: The search bar can be used to search any services
   <li>Header: The header section showcases the main message of the application along with an image and additional content.</li>
   <li>About Us: This section provides information about MEDIcure's mission and values.</li>
   <li>Insurance Features: Here, users can explore the insurance schemes available through MEDIcure.</li>
   <li>Services Offered: Users can learn about the different services offered by MEDIcure, such as consultations and prescription refills.</li>
-  <li>Get In Touch: This section allows users to submit their name, email, phone number, and message to get in touch with the MEDIcure team.</li>
+  <li>Get In Touch: This section allows users to submit their name, email, phone number, and message to get in touch with the MEDIcure team. It is useful during emergency purposes and giving feedback to our services</li>
   <li>Footer: The footer contains essential information about the application and its creators.</li>
 </ul>
 
@@ -34,7 +43,7 @@
 <p>The script.js file contains JavaScript functions that add interactivity and functionality to the MEDIcure web application:</p>
 
 <ul>
-  <li>Get In Touch Functionality: The submit button click event listener captures user input (name, phone number, email, and message) from the contact form. It constructs a mailto link with the user's information and the recipient's email address. Upon clicking the submit button, the function redirects the user to their default email client with the pre-filled message, allowing them to contact the MEDIcure team easily. Here I implemented this "Get in Touch" without using any backend technology. It is simply created by using javascript where the customer query will be directly send to the provided mail id.</li>
+  <li>Get In Touch Functionality: The submit button click event listener captures user input (name, phone number, email, and message) from the contact form. It constructs a mailto link with the user's information and the recipient's email address. Upon clicking the submit button, the function redirects the user to their default email client with the pre-filled message, allowing them to contact the MEDIcure team easily. Here I implemented this "Get in Touch" without using any backend technology. It is simply created by using javascript and SMTP protocol where the customer query will be directly send to the provided mail id.</li>
   <li>Navigation Links: Event listeners are added to the navigation links to enable smooth scrolling to different sections of the webpage. When users click on a navigation link, the page scrolls smoothly to the corresponding section.</li>
 </ul>
 

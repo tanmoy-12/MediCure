@@ -279,7 +279,7 @@ nav {
 }
 
 
-/******************************** CSS STYLINGS FOR AD IMAGE ***********************************/
+/******************************** CSS STYLINGS FOR ADVERTISEMENT IMAGE ***********************************/
 
 .image-ad img{
     width: 100%;
@@ -362,7 +362,7 @@ nav {
 }
 
 
-/******************************** CSS STYLINGS FOR GREETING ELEMENT ***********************************/
+/******************************** CSS STYLINGS FOR TAGGING ELEMENT ***********************************/
 
 .greet-container {
     position: relative;
@@ -497,6 +497,7 @@ input{
 }
 
 
+
 /******************************** CSS STYLINGS FOR FOOTER ELEMENT ***********************************/
 
 .footer-container {
@@ -522,6 +523,35 @@ input{
 .footer-info p {
     margin: 5px 0;
 }
+
+.footer-link{
+    text-align: center;
+    margin: 30px auto;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    padding: 25px ;
+    text-align: center;
+}
+
+.social-link{
+    margin: 0 18px;
+}
+
+.social-link i{
+    font-size: xx-large;
+    color: #28bf96;
+    margin-bottom: 5px;
+}
+
+.social-link h6{
+    font-weight: 700;
+    color: #28bf96;
+}
+
+
 
 
 
@@ -586,7 +616,7 @@ input{
 }
 
 
-/******************************** CSS STYLINGS FOR TABLET POTRAIT VIEW ***********************************/
+/******************************** CSS STYLINGS FOR MOBILE POTRAIT VIEW ***********************************/
 
 @media screen and (max-width:550px) {
 
