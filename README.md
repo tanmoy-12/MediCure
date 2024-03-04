@@ -66,10 +66,10 @@
   <img src="image/nav.png">
 </ul>
 
-
-
 <h2>Special Focus: Get In Touch Feature</h2>
 <p>The "Get In Touch" feature allows users to contact the MEDIcure team directly from the web application. It enhances user engagement and facilitates communication between users and the application creators. The JavaScript function associated with this feature simplifies the process of submitting inquiries or concerns, making it convenient for users to reach out to the MEDIcure team.</p>
+
+<h1>To access the live demo of MEDIcure, please visit: https://tanmoy-12.github.io/MediCure/</h1>
 
 ## 🌊Contributors
 <div>
