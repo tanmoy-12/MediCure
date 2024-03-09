@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!--==============================================  FONTS USED ============================================-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
     <!--============================================== FONT AWESOME STYLINGS ============================================-->
@@ -14,9 +17,6 @@
 </head>
 
 <body>
-    <!--============================================== MAIN CONTAINER ============================================-->
-    <div class="container">
-
 
         <!--============================================== NAV-BAR CONTENT ============================================-->
         <nav>
@@ -33,11 +33,29 @@
             </ul>            
            <a href="login.html"> <button class="btn" id="pc-view">Register Now</button></a>
         </nav>
-
-
+        
         <!--============================================== SEARCH BAR SECTION ============================================-->
-
+        <div class="nav1">
+            <ul>
+                <li>
+                    <a href="#apollo">MEDIcure Products</a>
+                    <ul>
+                        <li><a href="#">Product 1</a></li>
+                        <li><a href="#">Product 2</a></li>
+                        <li><a href="#">Product 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#baby">Baby Care</a></li>
+                <li><a href="#health_drinks">Health Drinks & Supplements</a></li>
+                <li><a href="#women">Women Care</a></li>
+                <li><a href="#personal">Personal Care</a></li>
+                <li><a href="#ayurveda">Ayurveda</a></li>
+                <li><a href="#home">Home Essentials</a></li>
+            </ul>
+        </div>
         <div class="search-container">
+            
+            <h2>Search Medicines & Essentials</h2>
             <div class="search">
                 <input type="search" placeholder="Type services to search..." name="search" class="search-bar">
                 <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
@@ -45,6 +63,30 @@
         </div>
 
 
+    <!--============================================== MAIN CONTAINER ============================================-->
+    <div class="container">
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="image/3.png" class="d-block w-100" alt="Ad 1">
+              </div>
+              <div class="carousel-item">
+                <img src="image/1.png" class="d-block w-100" alt="Ad 2">
+              </div>
+              <div class="carousel-item">
+                <img src="image/2.png" class="d-block w-100" alt="Ad 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          
         <!--============================================== HEADER CONTENT ============================================-->
         <div class="header">
             <div class="content">
@@ -60,7 +102,7 @@
             <div class="image">
                 <span class="image__bg"></span>
                 <img src="image/doctor.jpg" alt="header image" />
-                <div class="image__content image__content__1">
+                <!-- <div class="image__content image__content__1">
                     <span><i class="ri-user-3-line"></i></span>
                     <div class="details">
                         <h4>1520+</h4>
@@ -78,9 +120,90 @@
                             Expert Doctors
                         </li>
                     </ul>
+                </div> -->
+            </div>
+        </div>
+
+    <!--==service-info===========================-->
+    <section class="what-we-provide">
+
+        <!--**box1***********-->
+        <div class="w-info-box w-i-box1">
+            <!--icon-->
+            <div class="w-info-icon">
+                <i class="fa-solid fa-capsules"></i>
+            </div>
+            <!--text-->
+            <div class="w-info-text">
+                <strong>Specialised Service</strong>
+                <p>All medical services are available</p>
+            </div>
+        </div>
+        <!--**box2***********-->
+        <div class="w-info-box w-i-box2">
+            <!--icon-->
+            <div class="w-info-icon">
+                <i class="fa-regular fa-comments"></i>
+            </div>
+            <!--text-->
+            <div class="w-info-text">
+                <strong>24/7 Advanced Care</strong>
+                <p>Treatment will be provoided at any time</p>
+            </div>
+        </div>
+        <!--**box3***********-->
+        <div class="w-info-box w-i-box3">
+            <!--icon-->
+            <div class="w-info-icon">
+                <i class="fa-solid fa-square-poll-horizontal"></i>
+            </div>
+            <!--text-->
+            <div class="w-info-text">
+                <strong>Get Result Online</strong>
+                <p>Results will be provided to patient within 24 hrs. via mail</p>
+            </div>
+        </div>
+    
+    </section><!--end-->
+
+
+    <section id="our_story">
+
+        <!--**img**-->
+        <div class="our-story-img">
+            <img src="https://www.shutterstock.com/image-photo/profile-photo-attractive-family-doc-600nw-1724693776.jpg" />
+        </div>
+        <!--**text**-->
+        <div class="our-stroy-text">
+            <h2>Short Story About Our Clinic.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae ad aliquid in porro. Harum ipsa debitis deserunt ad facilis maxime! Accusantium ratione vitae quae repellendus, dolor debitis minima maiores.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab accusamus explicabo alias magni mollitia ea excepturi! Aliquam temporibus <a>Read More</a></p>
+            <!--numbers-of-happy-patients-->
+            <div class="story-numbers-container">
+                <!--box-->
+                <div class="story-numbers-box s-n-box1">
+                    <strong>1520+</strong>
+                    <span>Happy Patients</span>
+                </div>
+                <!--box-->
+                <div class="story-numbers-box s-n-box2">
+                    <strong>215+</strong>
+                    <span>Expert Doctor</span>
+                </div>
+                <!--box-->
+                <div class="story-numbers-box s-n-box3">
+                    <strong>315+</strong>
+                    <span>Hospital Room's</span>
+                </div>
+                <!--box-->
+                <div class="story-numbers-box s-n-box4">
+                    <strong>106+</strong>
+                    <span>Award Wining</span>
                 </div>
             </div>
         </div>
+        
+    </section><!--story-end-->
 
         <!--============================================== ABOUT US SECTION ============================================-->
         <div class="about-us" id="about">
@@ -247,7 +370,7 @@
             <p>Designed by Phoenix</p>
         </div>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     
 </body>

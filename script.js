@@ -88,3 +88,18 @@ faqItems.forEach((item) => {
         });
     });
 });
+
+
+
+function toggleDropdown() {
+    var section = document.getElementById('apollo');
+    if (section.style.display === 'none') {
+        section.style.display = 'block';
+        var header = document.querySelector('header h1');
+        header.textContent = 'Medicure';
+    } else {
+        section.style.display = 'none';
+        var header = document.querySelector('header h1');
+        header.textContent = 'Apollo Products';
+    }
+}

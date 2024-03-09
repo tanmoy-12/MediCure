@@ -36,11 +36,12 @@ a{
 
 
 nav {
-    padding: 2rem 1rem;
+    padding: 1rem 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    background: linear-gradient(to right, #ceebe3, #abf8eb);
 }
 
 .nav__logo {
@@ -54,6 +55,8 @@ nav {
     display: flex;
     align-items: center;
     gap: 1.2rem;
+    font-size: medium;
+    font-weight: 600;
 }
 
 .nav__links a:hover{
@@ -91,16 +94,70 @@ nav {
 }
 
 
+.nav1 {
+    background-color: #007552;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    height: 72px;
+}
+.nav1 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow-x: auto;
+}
+
+.nav1 ul li {
+    padding: 0.5rem;
+    flex: 1 0 auto; /* Let flex items grow and shrink with available space */
+    text-align: center; /* Center align the text within flex items */
+}
+
+.nav1 ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent link text from wrapping */
+}
+
+.nav1 ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav1 ul li a:hover {
+    color: #b9ccff; /* Change link color on hover */
+}
+section {
+    margin-bottom: 2rem; /* Add space between sections */
+}
+section h2 {
+    margin-top: 0; /* Remove top margin for section headings */
+}
+
+
 
 /******************************** CSS STYLINGS FOR SEARCH BAR ELEMENT ***********************************/
 
 .search-container{
-    background-color: #28bf96;
+    text-align: center;
+    background-color: #002e22;
     padding: 40px;
     margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
 }
 
 .search{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
@@ -227,13 +284,12 @@ nav {
 }
 
 .image__content__2 {
-    transform: translate(calc(-50% + 8rem), calc(-50% + 10rem));
+    transform: translate(calc(-50% + 9rem), calc(-50% + 11rem));
 }
 
 .image__content__2 ul {
     list-style: none;
     display: grid;
-    gap: 1rem;
 }
 
 .image__content__2 li {
@@ -249,6 +305,161 @@ nav {
 }
 
 
+/*==what-we-provide===============*/
+.what-we-provide{
+    max-width: 900px;
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.w-info-box{
+    width: 280px;
+    margin: 15px 15px 15px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.w-info-icon{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 15px;
+    font-size: 1.4rem;
+}
+.w-info-text{
+    display: flex;
+    flex-direction: column;
+}
+.w-info-text strong{
+    color: #122853;
+    font-weight: 700;
+}
+.w-info-text p{
+    color: #535353;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+.w-i-box1 .w-info-icon{
+    background-color: #ffdad4;
+}
+.w-i-box2 .w-info-icon{
+    background-color: #d4ffe1;
+}
+.w-i-box3 .w-info-icon{
+    background-color: #d4e7ff;
+}
+
+
+#our_story{
+    background-color: #f5f7fb;
+    max-width: 1200px;
+    width: 90%;
+    margin: 80px auto;
+    border: 10px solid #ffffff;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.12);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.our-story-img{
+    position: relative;
+    display: flex;
+}
+.our-story-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.story-play-btn{
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #dd3f3f;
+    padding: 20px 10px;
+    border-radius: 4px 4px 10px 10px;
+    color: #ffffff;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.story-play-btn i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #aa2f0a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.our-stroy-text{
+    padding: 50px;
+}
+.our-stroy-text h2{
+    font-size: 2.8rem;
+    color: #122853;
+    line-height: 3rem;
+}
+.our-stroy-text p{
+    color: #535353;
+    font-size: 0.9rem;
+    margin: 10px 0px;
+    line-height: 1.4rem;
+    letter-spacing: 0.3px;
+}
+.our-stroy-text p a{
+    color: #122853;
+    text-decoration: underline;
+}
+.story-numbers-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+.story-numbers-box{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+.story-numbers-box strong{
+    color: #122853;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.story-numbers-box span{
+    color: #535353;
+    font-size: 0.9rem;
+}
+.s-n-box1{
+    background-color: #d4dfff;
+}
+.s-n-box2{
+    background-color: #d4e7ff;
+}
+.s-n-box3{
+    background-color: #ffd4fd;
+}
+.s-n-box4{
+    background-color: #d7d4ff;
+}
+
+
 
 
 /******************************** CSS STYLINGS FOR ABOUT US ELEMENT ***********************************/
@@ -261,10 +472,18 @@ nav {
     width: 100%;
     margin: 30px auto;
     padding: 50px 60px;
-    background-color: #f8f8f8;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    /* Decrease opacity */
+    background: linear-gradient(rgba(250,250,250, 0.6),
+rgba(250,250,250, 0.8)), url('https://img.freepik.com/free-psd/interior-modern-emergency-room-with-empty-nurses-station-generative-ai_587448-2137.jpg?size=626&ext=jpg&ga=GA1.1.539837299.1709856000&semt=ais');
 }
 
-.about-us h2 {
+.about-us h1 {
     font-size: 28px;
     color: #333;
     margin-bottom: 20px;
@@ -272,7 +491,8 @@ nav {
 
 .about-us p {
     font-size: 20px;
-    color: #666;
+    font-weight: 500;
+    color: #2b2b2b;
     line-height: 1.6;
     margin: 15px auto;
     text-align: justify;
@@ -345,7 +565,7 @@ nav {
     box-shadow: 7px 6px 6px 0px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     margin: 20px;
-    height: 300px;
+    height: 400px;
 }
 
 .up{
@@ -613,19 +833,37 @@ input{
     .faq-container{
         max-width: 87%;
     }
+
+    #our_story{
+        grid-template-columns: 1fr;
+    }
+    .our-story-img img{
+        max-height: 400px;
+    }
+    .our-stroy-text{
+        padding: 30px;
+    }
+
+    .what-we-provide{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
 }
 
 
 /******************************** CSS STYLINGS FOR MOBILE POTRAIT VIEW ***********************************/
 
 @media screen and (max-width:550px) {
+    nav{
+        padding: 1rem;
+    }
 
     .nav__links {
         gap: 0.7rem;
     }
 
     .nav-head{
-        padding: 3px;
+        padding: 1px;
     }
 
     .search-bar{
@@ -667,6 +905,19 @@ input{
 
     .contact{
         width: 350px;
+    }
+
+    .what-we-provide{
+        grid-template-columns: 1fr;
+    }
+    .our-stroy-text{
+        padding: 20px 15px;
+    }
+    .story-numbers-box{
+        padding: 15px;
+    }
+    .story-numbers-box strong{
+        font-size: 1.4rem;
     }
 }
 
