@@ -29,6 +29,7 @@ body {
 a{
     cursor: pointer;
     text-decoration: none;
+    color: #ffd4fd;
 }
 
 
@@ -76,15 +77,18 @@ a{
     outline: none;
     border: none;
     font-size: 1rem;
-    color: var(--white);
-    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: large;
+    background-color: #002e22;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
 
+
+
 .btn:hover {
-    background-color: var(--primary-color-dark);
+    background-color: #007552;
 }
 
 .container {
@@ -198,13 +202,13 @@ section h2 {
 /******************************** CSS STYLINGS FOR HEADER ELEMENT ***********************************/
 
 .header {
-    display: flex;
-    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    flex: 1;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     align-items: center;
 }
-
 
 .content h1 {
     margin-bottom: 1rem;
@@ -228,84 +232,18 @@ section h2 {
     position: relative;
     text-align: center;
     isolation: isolate;
+    border-radius: 50%;
 }
 
-.image__bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 450px;
-    width: 450px;
-    background-color: var(--primary-color);
-    border-radius: 100%;
-    z-index: -1;
-}
 
 .image img {
     width: 100%;
     max-width: 475px;
-}
-
-.image__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-align: left;
-    background-color: var(--white);
-    border-radius: 5px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.image__content__1 {
-    transform: translate(calc(-50% + 7rem), calc(-50% + 2rem));
-}
-
-.image__content__1 span {
-    padding: 10px 12px;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    background-color: #defcf4;
-    border-radius: 100%;
-}
-
-.image__content__1 h4 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
-.image__content__1 p {
-    color: var(--text-light);
-}
-
-.image__content__2 {
-    transform: translate(calc(-50% + 9rem), calc(-50% + 11rem));
-}
-
-.image__content__2 ul {
-    list-style: none;
-    display: grid;
-}
-
-.image__content__2 li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    color: var(--text-light);
-}
-
-.image__content__2 span {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+    border-radius: 50%;
 }
 
 
-/*==what-we-provide===============*/
+/*=========================== what-we-provide =========================*/
 .what-we-provide{
     max-width: 900px;
     width: 90%;
@@ -475,6 +413,7 @@ section h2 {
     background-image: url("");
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
     background-position: center;
     color: #fff;
     text-align: center;
@@ -678,7 +617,7 @@ rgba(250,250,250, 0.8)), url('https://img.freepik.com/free-psd/interior-modern-e
     font-weight: 600;
 }
 
-/*==why-choose-us======================*/
+/*========================== why-choose-us =================================*/
 #why-choose-us{
     width: 100%;
     display: grid;
@@ -863,8 +802,8 @@ details[open] {
 
 
 
-/*==Testimonials=============================*/
-#testimonials{
+/*========================== Testimonials =============================*/
+#testimonials {
     background-color: #f5f7fb;
     padding: 50px 0px;
     width: 100%;
@@ -873,7 +812,8 @@ details[open] {
     justify-content: center;
     align-items: center;
 }
-.testimonials-heading{
+
+.testimonials-heading {
     max-width: 1200px;
     width: 90%;
     display: flex;
@@ -882,11 +822,13 @@ details[open] {
     align-items: center;
     text-align: center;
 }
-.testimonials-heading h3{
+
+.testimonials-heading h3 {
     font-size: 2.4rem;
     color: #122853;
 }
-.testimonials-heading p{
+
+.testimonials-heading p {
     color: #535353;
     margin-top: 10px;
     max-width: 600px;
@@ -894,43 +836,41 @@ details[open] {
     letter-spacing: 0.5px;
     line-height: 1.4rem;
 }
-.testimonials-content{
-    max-width: 1200px;
+
+.testimonials-content {
     width: 90%;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    margin-top:50px;
+    margin-top: 50px;
+    padding-top: 370px;
+    display: flex;
+    height: 400px;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.testimonials-img{
-    height: 100%;
-    margin-left: auto;
-    margin-right: 60px;
-}
-.testimonials-img img{
-    height: 100%;
-    max-height: 450px;
-    object-fit: contain;
-    object-position: center;
-}
-.testimonials-box-container{
+
+.testimonials-box-container {
     margin-top: 50px;
     overflow: hidden;
 }
-.testimonials-box{
+
+.testimonials-box {
     padding: 10px;
     margin: 20px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 80%;
     background-color: #cecece;
 }
-.t-profile{
+
+.t-profile {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.t-profile-img{
+
+.t-profile-img {
     width: 70px;
     height: 70px;
     border-radius: 6px;
@@ -938,49 +878,47 @@ details[open] {
     margin-right: 10px;
     overflow: hidden;
 }
-.t-profile-img img{
+
+.t-profile-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-.t-profile-text{
+
+.t-profile-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.t-profile-text strong{
+
+.t-profile-text strong {
     color: #122853;
     font-size: 1.2rem;
 }
-.t-profile-text span{
+
+.t-profile-text span {
     color: #535353;
     font-size: 0.9rem;
     letter-spacing: 0.3px;
 }
-.t-rating{
+
+.t-rating {
     font-size: 0.8rem;
     color: #ffbc02;
     margin-top: 5px;
 }
-.testimonials-box p{
+
+.testimonials-box p {
     font-size: 0.9rem;
     color: #122853;
     line-height: 1.4rem;
     letter-spacing: 0.3px;
     margin-top: 30px;
 }
-.swiper-pagination{
-   position: static !important;
-}
 
-.testimonials-content{
-    height: 300px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.swiper-pagination {
+    position: static !important;
 }
 
 
@@ -1104,89 +1042,6 @@ input{
 }
 
 
-
-/******************************** CSS STYLINGS FOR FOOTER ELEMENT ***********************************/
-
-footer{
-    width: 100%;
-    background-color:  #f5f7fb;
-}
-.footer-container{
-    max-width: 1200px;
-    width: 90%;
-    margin: 0px auto;
-    padding: 50px 0px;
-    display:flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.footer-company-box{
-    max-width: 330px;
-}
-.footer-company-box p{
-    color: #585858;
-    margin: 5px 0px;
-    font-size: 0.9rem;
-    letter-spacing: 0.3px;
-    line-height: 1.4rem;
-}
-.footer-social{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.footer-social a{
-    margin-top: 10px;
-    margin-right: 10px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #e9e9e9;
-    color: #333333;
-    font-size: 0.9rem;
-    transition: all ease 0.3s;
-}
-.footer-social a:hover{
-    background-color: #122853;
-    color: #ffffff;
-}
-.footer-link-box strong{
-    font-size: 1.2rem;
-    color: #122853;
-    font-weight: 600;
-}
-.footer-link-box ul{
-    margin-top: 5px;
-}
-.footer-container ul li a{
-    color: #585858;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    display: flex;
-    transition: all ease 0.3s;
-}
-.footer-container ul li a:hover{
-    color: #122853;
-}
-.footer-bottom{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    grid-gap: 10px;
-    border-top: 1px solid #e9e9e9;
-    padding: 20px 0px;
-    max-width: 1200px;
-    width: 90%;
-    margin: auto;
-}
-.footer-bottom span{
-    color: #252525;
-    font-size: 0.9rem;
-}
 
 @media screen and (max-width:800px) {
     .header{

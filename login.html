@@ -1,68 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login/Signup Page</title>
-    <link rel="stylesheet" href="login.css">
-</head>
-<body>
-    <div class="container">
-        <div id="loginform" class="container" >
-            <form id="loginForm">
-                <h2>Login Form</h2>
-                <input type="text" id="username" placeholder="username">
-    
-                <input type="password" id="password" placeholder="Password">
-    
-                <button class="submit" type="button" onclick="login()">Login</button><br>
-                <div class="linkDiv">
-                    <div class="link-content">
-                        <a href="#" class="link">Forgot Password?</a><br>
-                    </div>
-                    <div class="link-content">
-                        <a id="signupbtn" href="#" class="link" style="color: blue;">Don't have an account? Create Account</a>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div id="signupform" class="container" style="display: none;">
-            <form id="signupForm">
-                <h2>Sign Up Form</h2>
-                <input type="text" id="fullName" placeholder="Your Full Name" required>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form in HTML | CodingNepal</title>
+      <link rel="stylesheet" href="login.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form action="#" class="login">
+                <div class="field">
+                    <input id="username" type="text" placeholder="username" name="username" required>
+                 </div>
+                  <div class="field">
+                     <input id="email" type="text" placeholder="Email Address" name="email" required>
+                  </div>
+                  <div class="field">
+                     <input id="password" type="password" placeholder="Password" name="password" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login" id="submit">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                  </div>
+               </form>
+               <form action="#" class="signup">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" name="email" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" name="password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Confirm password" name="password" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
 
-                <input type="email" id="email" placeholder="Your Email" required>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCEKhE2abl61b_ioYEo8IYo2eczgqjt0Yo",
+      authDomain: "medicure-b4874.firebaseapp.com",
+      databaseURL: "https://medicure-b4874-default-rtdb.firebaseio.com",
+      projectId: "medicure-b4874",
+      storageBucket: "medicure-b4874.appspot.com",
+      messagingSenderId: "391386166556",
+      appId: "1:391386166556:web:bcc3591c48d7b0f64c76d9"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
 
-                <input type="password" id="newPassword" placeholder="Enter a new password" required>
+    submit.addEventListener('click', (e) => {
 
-                <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+        var username= document.getElementById('username').value;
+        var email= document.getElementById('email').value;
+        var password = document.getElementById('password').value;
 
-                <button type="button" class="submit" onclick="signup()">Sign Up</button><br/>
-
-                <div class="link-content">
-                    <a id="loginbtn" href="#" class="link" style="color: blue; ">Already have an account? Log in</a>
-                </div>
-                
-            </form>
-        </div>
-    </div>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script >
-        const loginDiv=document.getElementById("loginform"); 
-        const signupDiv=document.getElementById("signupform");
-
-        const loginbtn=document.getElementById("loginbtn");
-        const signupbtn=document.getElementById("signupbtn");
-
-        loginbtn.onclick=function(){
-            loginDiv.style.display="block";
-            signupDiv.style.display="none";
-        }
-
-        signupbtn.onclick=function(){
-            loginDiv.style.display="none";
-            signupDiv.style.display="block";
-        }
-    </script>
-</body>
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed up 
+            const user = userCredential.user;
+            // ...
+            alert("User Created");
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert('ErrorMessage');
+    // ..
+  });
+    });
+  </script>
+   </body>
 </html>
