@@ -198,14 +198,13 @@ section h2 {
 /******************************** CSS STYLINGS FOR HEADER ELEMENT ***********************************/
 
 .header {
-    padding: 0 1rem;
-    flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     align-items: center;
 }
+
 
 .content h1 {
     margin-bottom: 1rem;
@@ -1176,7 +1175,12 @@ footer{
     font-size: 0.9rem;
 }
 
-
+@media screen and (max-width:800px) {
+    .header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 
 /******************************** CSS STYLINGS FOR TABLET VIEW ***********************************/
 
@@ -1231,6 +1235,15 @@ footer{
 
     #mobile-view{
         display: flex;
+    }
+
+    .header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .content{
+        width: 100%;
     }
 
     .nav-head{
