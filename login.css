@@ -4,7 +4,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Tilt Neon', sans-serif;
-    background: linear-gradient(to right, #c2e4d4, #c8fff6, #cae9e1);
+    /* background: linear-gradient(to right, #c2e4d4, #c8fff6, #cae9e1); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(rgba(250,250,250, 0.6),
+  rgba(250,250,250, 0.8)),url('https://thumbs.dreamstime.com/b/doctors-hospital-corridor-nurse-pushing-gurney-stretcher-bed-male-senior-female-patient-32154012.jpg');
+
     text-align: center;
     min-height: 100vh; /* Set a minimum height of 100% of the viewport height */
 }

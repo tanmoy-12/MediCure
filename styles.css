@@ -200,7 +200,8 @@ section h2 {
 .header {
     padding: 0 1rem;
     flex: 1;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     align-items: center;
@@ -1267,6 +1268,10 @@ footer{
 
     #why-choose-us{
         grid-template-columns: 1fr;
+    }
+
+    .nav1{
+        display: none;
     }
 }
 
