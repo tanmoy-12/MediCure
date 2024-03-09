@@ -1,323 +1,226 @@
-/******************************** GOOGLE FONTS ***********************************/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
-
-
-/************************** CSS STYLINGS FOR GENERAL STRUCTURE OF THE WEBPAGE ********************/
-:root {
-    --primary-color: #28bf96;
-    --primary-color-dark: #209677;
-    --text-dark: #111827;
-    --text-light: #6b7280;
-    --white: #ffffff;
-}
-
-#mobile-view{
-    display: none;
-}
-
-* {
-    padding: 0;
-    margin: 0;
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-
-body {
-    font-family: "Roboto", sans-serif;
-}
-
 a{
-    cursor: pointer;
     text-decoration: none;
 }
+ul{
+    list-style: none;
+}
 
-
-/************************************ CSS STYLINGS FOR NAVBAR ********************************/
-
-
-.navbar {
-    padding: 1rem 4rem;
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(233, 233, 233); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(56, 56, 56); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1b1b1b; 
+  }
+/*==hero========================*/
+#hero{
+    min-height: 600px;
+    background-color: #f5f7fb;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
-    background: linear-gradient(to right, #ceebe3, #abf8eb);
 }
-
-.nav__logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.nav__links {
-    list-style: none;
+.navigation{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 1.2rem;
-    font-size: medium;
-    font-weight: 600;
-}
-
-.nav__links a:hover{
-    color: #003b2c;
-    font-size: large;
-}
-
-.link a {
-    text-decoration: none;
-    color: var(--text-light);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn {
-    padding: 1rem 2rem;
-    outline: none;
-    border: none;
-    font-size: 1rem;
-    color: var(--white);
-    background-color: var(--primary-color);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: var(--primary-color-dark);
-}
-
-.container {
     max-width: 1200px;
-    margin: auto;
-    min-height: 100vh;
+    width: 90%;
+    margin: 0px auto;
+    padding: 30px 0px;
 }
-
-
-.nav1 {
-    background-color: #007552;
-    padding: 1rem;
-    border-radius: 5px;
-    font-weight: 600;
-    height: 72px;
-}
-.nav1 ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    overflow-x: auto;
-}
-
-.nav1 ul li {
-    padding: 0.5rem;
-    flex: 1 0 auto; /* Let flex items grow and shrink with available space */
-    text-align: center; /* Center align the text within flex items */
-}
-
-.nav1 ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    transition: color 0.3s ease;
-    white-space: nowrap; /* Prevent link text from wrapping */
-}
-
-.nav1 ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.nav1 ul li a:hover {
-    color: #b9ccff; /* Change link color on hover */
-}
-section {
-    margin-bottom: 2rem; /* Add space between sections */
-}
-section h2 {
-    margin-top: 0; /* Remove top margin for section headings */
-}
-
-
-
-/******************************** CSS STYLINGS FOR SEARCH BAR ELEMENT ***********************************/
-
-.search-container{
-    text-align: center;
-    background-color: #002e22;
-    padding: 40px;
-    margin-bottom: 40px;
-    justify-content: center;
-    align-items: center;
-    color: #ffff;
-}
-
-.search{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.search-bar{
-    width: 600px;
-    height: 49px;
-    padding: 5px 10px;
-    font-size: large;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px 0 0 8px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 0;
-}
-
-.search-button{
-    width: 45px;
-    border: none;
-    color: #0F2167;
-    font-size: x-large;
-    font-weight: 600;
-    border-radius: 0 8px 8px 0;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.search-button:hover{
-    background-color: #00275a;
-    color: #ffffff;
-}
-
-.search-bar:focus{
-    border: none;
-    outline: 1px #00275a;
-}
-
-
-/******************************** CSS STYLINGS FOR HEADER ELEMENT ***********************************/
-
-.header {
-    padding: 0 1rem;
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: center;
-}
-
-.content h1 {
-    margin-bottom: 1rem;
-    font-size: 3rem;
+.logo{
+    color:#122853;
     font-weight: 700;
-    color: var(--text-dark);
+    font-size: 1.4rem;
 }
-
-.content h1 span {
-    font-weight: 400;
-}
-
-.content p {
-    margin-bottom: 2rem;
-    color: var(--text-light);
-    line-height: 1.75rem;
-    text-align: justify;
-}
-
-.image {
-    position: relative;
-    text-align: center;
-    isolation: isolate;
-}
-
-.image__bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 450px;
-    width: 450px;
-    background-color: var(--primary-color);
-    border-radius: 100%;
-    z-index: -1;
-}
-
-.image img {
-    width: 100%;
-    max-width: 475px;
-}
-
-.image__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-align: left;
-    background-color: var(--white);
+.logo span{
+    background-color: #014dd5;
+    color: #ffffff;
+    padding: 0px 5px;
     border-radius: 5px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.image__content__1 {
-    transform: translate(calc(-50% + 7rem), calc(-50% + 2rem));
-}
-
-.image__content__1 span {
-    padding: 10px 12px;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    background-color: #defcf4;
-    border-radius: 100%;
-}
-
-.image__content__1 h4 {
-    font-size: 1.5rem;
     font-weight: 600;
-    color: var(--text-dark);
+    margin-right: 5px;
 }
-
-.image__content__1 p {
-    color: var(--text-light);
-}
-
-.image__content__2 {
-    transform: translate(calc(-50% + 9rem), calc(-50% + 11rem));
-}
-
-.image__content__2 ul {
-    list-style: none;
-    display: grid;
-}
-
-.image__content__2 li {
+.menu{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 40px;
+}
+.menu li a{
+    margin: 0px 20px;
+    color: #303030;
+    font-weight: 500;
+    transition: all ease 0.3s;
+}
+.menu li a:hover{
+    color: #014dd5;
+}
+.nav-appointment-btn{
+    height: 45px;
+    padding: 0px 20px;
+    border-radius:4px;
+    background-color: #014dd5;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+/*==hero-content==================*/
+.hero-content{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: flex-start;
-    gap: 0.5rem;
-    color: var(--text-light);
+    margin-top: auto;
 }
-
-.image__content__2 span {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+.hero-img{
+    display: flex;
 }
-
-
+.hero-img img{
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    object-position: center bottom;
+}
+.hero-text{
+   display: flex;
+   flex-direction: column;
+   margin-top: 30px; 
+}
+.hero-text h1{
+    font-size: 3.2rem;
+    color: #122853;
+    line-height: 3.6rem;
+}
+.hero-text p{
+    color: #535353;
+    margin: 15px 0px;
+    max-width: 500px;
+    letter-spacing: 0.3px;
+    line-height: 1.8rem;
+}
+.hero-text-btns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.hero-text-btns a{
+    height: 45px;
+    padding: 0px 15px;
+    background-color: #122853;
+    color: #ffffff;
+    border-radius: 4px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+.hero-text-btns a i{
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #014dd5;
+    margin-right: 8px;
+    color: #ffffff;
+    font-size: 0.5rem;
+    padding-bottom: 1px;
+}
+/*==appointment-search=====================*/
+.appointment-search-container{
+    max-width: 1000px;
+    width: 90%;
+    background-color: #ffffff;
+    padding:20px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 16px 30px rgba(0,0,0,0.12);
+    margin-top: -60px;
+    z-index: 3;
+    position: relative;
+}
+.appointment-search-container h3{
+    color: #122853;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+.appointment-search{
+    display: grid;
+    grid-template-columns: 1fr 1fr 60px;
+    grid-gap: 10px;
+}
+.appo-search-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7fbff;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #e4e4e4;
+}
+.appo-search-box i{
+    color: #535353;
+    margin-right: 10px;
+}
+.appo-search-box input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.appointment-search button{
+    background-color: #014dd5;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
 /*==what-we-provide===============*/
 .what-we-provide{
-    max-width: 900px;
+    max-width: 1200px;
     width: 90%;
     margin: 50px auto;
-    display: flex;
-    flex-wrap: wrap;
-    
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .w-info-box{
-    width: 280px;
-    margin: 15px 15px 15px 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -354,8 +257,7 @@ section h2 {
 .w-i-box3 .w-info-icon{
     background-color: #d4e7ff;
 }
-
-
+/*==our-story=======================*/
 #our_story{
     background-color: #f5f7fb;
     max-width: 1200px;
@@ -458,87 +360,7 @@ section h2 {
 .s-n-box4{
     background-color: #d7d4ff;
 }
-
-
-
-
-/******************************** CSS STYLINGS FOR ABOUT US ELEMENT ***********************************/
-
-.about-us {
-    margin: 50px 0;
-}
-
-.about-us-content {
-    width: 100%;
-    margin: 30px auto;
-    padding: 50px 60px;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    /* Decrease opacity */
-    background: linear-gradient(rgba(250,250,250, 0.6),
-rgba(250,250,250, 0.8)), url('https://img.freepik.com/free-psd/interior-modern-emergency-room-with-empty-nurses-station-generative-ai_587448-2137.jpg?size=626&ext=jpg&ga=GA1.1.539837299.1709856000&semt=ais');
-}
-
-.about-us h1 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.about-us p {
-    font-size: 20px;
-    font-weight: 500;
-    color: #2b2b2b;
-    line-height: 1.6;
-    margin: 15px auto;
-    text-align: justify;
-}
-
-
-/******************************** CSS STYLINGS FOR ADVERTISEMENT IMAGE ***********************************/
-
-.image-ad img{
-    width: 100%;
-}
-
-
-/******************************** CSS STYLINGS FOR INSURANCE ELEMENT ***********************************/
-
-.container-insurance{
-    padding: 30px 0;
-}
-
-.insurance{
-    background-color: #dcedf8;
-    padding: 20px;
-    margin: 30px auto;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.insurance p{
-    margin: 20px auto;
-}
-
-.insurance ul{
-    padding: 10px 20px;
-}
-
-.insurance li{
-    font-size:  20px;
-    font-weight: 500;
-}
-
-
-
-/******************************** CSS STYLINGS FOR SERVICES ELEMENT ***********************************/
-
+/*==our-services=====================*/
 #our-services{
     width: 100%;
     margin: 50px auto 0px auto;
@@ -677,7 +499,6 @@ rgba(250,250,250, 0.8)), url('https://img.freepik.com/free-psd/interior-modern-e
     text-decoration: underline;
     font-weight: 600;
 }
-
 /*==why-choose-us======================*/
 #why-choose-us{
     width: 100%;
@@ -793,76 +614,69 @@ rgba(250,250,250, 0.8)), url('https://img.freepik.com/free-psd/interior-modern-e
     color: #ffffff;
     font-weight: 600;
 }
-
-/******************************** CSS STYLINGS FOR TAGGING ELEMENT ***********************************/
-
-.greet-container {
-    position: relative;
+/*==our-team====================*/
+#our-team{
+    max-width: 1200px;
+    width: 90%;
+    margin: 80px auto;
+}
+.our-team-heading{
     display: flex;
-    text-align: center;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    margin: 30px auto;
-    height: 180px;
-    padding: 25px;
-    background-image: url("https://images.pexels.com/photos/5340280/pexels-photo-5340280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-    background-position: center;
-    border-radius: 6px;
-    color: rgb(0, 45, 63);
-    z-index: 0; 
+    align-items: center;
+    text-align: center;
 }
-
-.greet-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.5); 
-    z-index: -1; 
+.our-team-heading h3{
+    font-size: 2.4rem;
+    color: #122853;
 }
-
-
-
-/******************************** CSS STYLINGS FOR FAQs ***********************************/
-
-
-.faq-container {
-    max-width: 800px;
-    margin: 90px auto;
+.our-team-heading p{
+    color: #535353;
+    letter-spacing: 0.3px;
+    font-size: 0.9rem;
 }
-
-.faq-container h2{
-    margin: 20px auto;
+.team-box-container{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
 }
-
-details {
-    border: 1px solid #ddd;
-    margin: 20px auto;
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all ease 3s;
+.team-box{
+    max-width: 100%;/*300px*/
+    display: flex;
+    flex-direction: column;
 }
-
-details p{
-    padding: 10px 0 0 20px;
+.team-img{
+    background-color: #f5f7fb;
+    padding: 10px 10px 0px 10px;
+    border-radius: 10px;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
 }
-
-summary {
-    font-weight: bold;
-    font-size: 1.2rem;
+.team-img img{
+    width: 100%;
+    height: 95%;
+    object-fit: contain;
+    object-position: center bottom;
 }
-
-details[open] {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+.team-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
 }
-
-
-
+.team-text strong{
+    color: #122853;
+}
+.team-text span{
+    color: #303030;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
 /*==Testimonials=============================*/
 #testimonials{
     background-color: #f5f7fb;
@@ -969,13 +783,11 @@ details[open] {
 .swiper-pagination{
    position: static !important;
 }
-
-
 /*==subscribe=====================*/
 #subscribe{
     max-width: 1000px;
     width: 90%;
-    background-color:#17a7ac;
+    background-color:#174dac;
     padding: 50px;  
     border-radius: 10px;
     margin: 50px auto;
@@ -999,12 +811,12 @@ details[open] {
     border-radius: 4px;
     height: 50px;
     display: flex;
-    padding: 2px;
+    padding: 5px;
     margin-top: 20px;
 }
 .subscribe-box input{
     width: 100%;
-    height: 50%;
+    height: 100%;
     padding: 0px 10px;
     border: none;
     outline: none;
@@ -1022,78 +834,7 @@ details[open] {
     font-weight: 500;
     letter-spacing: 0.4px;
 }
-
-
-
-
-/******************************** CSS STYLINGS FOR CONTACTS ELEMENT ***********************************/
-
-.contact-parent-container{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin: 70px auto;
-}
-
-.contact{
-    padding: 20px 15px;
-    border-radius: 12px;
-    justify-items: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    height: 500px;
-    background-color: #d5dfe0c9;
-    box-shadow: 7px 6px 6px 0px rgba(0, 0, 0, 0.2);
-}
-
-input{
-    outline: none;
-    border: none;
-    padding: 10px;
-    font-size: large;
-    font-weight: 400;
-    border-radius: 8px;
-    width: 90%;
-    margin: 15px;
-}
-
-.message{
-    height: 260px;
-    width: 90%;
-    padding: 10px;
-    margin: none;
-    outline: none;
-    font-size: large;
-    font-weight: 400;
-    font-family: "Roboto", sans-serif;
-    border-radius: 8px;
-}
-
-.submit{
-    margin: 20px 0;
-    padding: 6px;
-    width: 120px;
-    height: 40px;
-    font-size: large;
-    font-weight: 600;
-    background-color: #00275a;
-    color:#ffff;
-    border: none;
-    border-radius: 8px;
-    transition: all ease 1s;
-}
-
-.submit:hover{
-    box-shadow: 7px 6px 6px 0px rgba(0, 0, 0, 0.2);
-    background-color: #0046a1;
-}
-
-
-
-/******************************** CSS STYLINGS FOR FOOTER ELEMENT ***********************************/
-
+/*==footer================================*/
 footer{
     width: 100%;
     background-color:  #f5f7fb;
@@ -1175,81 +916,139 @@ footer{
     font-size: 0.9rem;
 }
 
-
-
-/******************************** CSS STYLINGS FOR TABLET VIEW ***********************************/
-
-@media screen and (max-width:800px) {
-
-    .navbar{
-        padding: 10px;
+/*==making-responsive====================*/
+.menu-icon,
+.menu-btn{
+    display: none;
+}
+@media(max-width:1200px){
+    .footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+}
+@media(max-width:1050px){
+    .hero-content{
         display: flex;
-        flex-direction: row;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        margin: 50px auto;
     }
-
-    .hamburger-button {
-        background-color: transparent;
-        color: rgb(0, 0, 0);
-        outline: none;
-        border: none;
-        font-weight: 700;
-        font-size: 34px;
-        transition: all ease 1s;
-        cursor: pointer;
-     }
-
-     .nav-links {
-        display: none;
-        background-color: #333;
-        color: white;
-     }
-
-     .hamburger-menu{
-        width: 100%;
-     }
-
-     .nav-links a {
-        display: block;
-        padding: 15px;
-        color: white;
-        text-decoration: none;
-     }
-     .nav-links a:hover {
-        background-color: #111;
-        z-index: 2;
-        position: relative;
-     }
-
-     
-    #pc-view{
-        display: none;
+    .hero-text{
+        margin-bottom: 40px;
+        background-color: #ffffff;
+        padding: 30px;
+        margin-top: 0px;
     }
-
-    #mobile-view{
-        display: flex;
-    }
-
-    .nav-head{
-        width: 80%;
-        display: flex;
+}
+@media(max-width:950px){
+    .navigation{
         justify-content: space-between;
-        align-items: center;
-        padding: 5px 20px;
+        padding: 30px 0px;
+        position: relative;
+        width: 100%;
+        padding: 20px;
     }
-
-    nav{
+    .logo,
+    .nav-appointment-btn{
+        z-index: 103;
+    }
+    .logo{
+        margin-right: auto;
+        margin-left: 20px;
+    }
+    .navigation .menu{
+        display: none;
+        position: absolute;
+        left: 0px;
+        top:100%;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        z-index: 102;
+        box-shadow: 2px 30px 30px rgba(0,0,0,0.06);
+    }
+    .navigation .menu::after{
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: -100%;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100%;
+    }
+    .navigation .menu li{
+        width:100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .navigation .menu li a{
+        width: 100%;
+        height: 40px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        padding: 30px 20px;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .navigation .menu-icon{
+        cursor: pointer;
+        float: right;
+        padding: 10px 0px;
+        position: relative;
+        user-select: none;
+        z-index: 106;
+    }
+    .navigation .menu-icon .nav-icon{
+        background-color: #181818;
+        display: block;
+        position: relative;
+        height: 2px;
+        transition: background 0.2s ease-out;
+        width: 25px;
+    }
+    .navigation .menu-icon .nav-icon::before,
+    .navigation .menu-icon .nav-icon::after{
+        background-color: #181818;
+        content: '';
+        position: absolute;
+        height: 100%;
+        transition: all ease-out 0.2s;
+        width: 100%;
     }
 
-    .faq-container{
-        max-width: 87%;
+    .navigation .menu-icon .nav-icon::before{
+        top: 9px;
+    }
+    .navigation .menu-icon .nav-icon::after{
+        top: -9px;
+    }
+    .navigation .menu-icon:checked ~ .menu-icon .nav-icon,
+    .navigation .menu-btn:checked ~ .menu-icon .nav-icon{
+        background-color: transparent;
+    }
+    .navigation .menu-btn:checked ~ .menu-icon .nav-icon::before{
+        transform: rotate(-45deg);
+        top: 0px;
+    }
+    .navigation .menu-btn:checked ~ .menu-icon .nav-icon::after{
+        transform: rotate(45deg);
+        top: 0px;
+    }
+ 
+    .navigation .menu-btn:checked ~ .menu{
+        display: block;
     }
 
+    .what-we-provide{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
     #our_story{
         grid-template-columns: 1fr;
     }
@@ -1259,74 +1058,46 @@ footer{
     .our-stroy-text{
         padding: 30px;
     }
-
-    .what-we-provide{
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    }
-
     #why-choose-us{
         grid-template-columns: 1fr;
     }
+    .testimonials-content{
+        grid-template-columns: 1fr;
+    }
+    .testimonials-img{
+        margin-right: auto;
+    }
+    .testimonials-img img{
+        width: 100%;
+    }
 }
-
-
-/******************************** CSS STYLINGS FOR MOBILE POTRAIT VIEW ***********************************/
-
-@media screen and (max-width:550px) {
-    nav{
-        padding: 0.6rem;
-    }
-
-    .nav__links {
-        gap: 0.7rem;
-    }
-
-    .nav-head{
-        padding: 1px;
-    }
-
-    .search-bar{
-        width: 90%;
-    }
-
-    .image__bg{
-        display: none;
-    }
-
-    .image__content__2{
-        display: none;
-    }
-
-    .image__content__1 {
-        transform: translate(calc(-50% + 6rem), calc(-50% + 6rem));
-    }
-
-    .details h4{
-        font-size: medium;
-    }
-
-    .details p{
-        font-size: small;
-    }
-
-    .about-us-content{
+@media(max-width:620px){
+    .hero-text{
         padding: 20px;
     }
-
-    .about-us-content p{
-        font-size: medium;
+    .hero-text h1,
+    .our-stroy-text h2,
+    .services-heading h2,
+    .why-choose-us-left h3,
+    .why-choose-us-right h3,
+    .our-team-heading h3,
+    .testimonials-heading h3{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
     }
-
-    .insurance li{
-        font-size: medium;
-        text-align: justify;
+    .hero-text-btns{
+        flex-direction: column;
     }
-
-    .contact{
-        width: 350px;
+    .hero-text-btns a{
+        width: 100%;
+        margin-top: 5px;
     }
-
+    .appointment-search{
+        grid-template-columns: 1fr;
+    }
+    .appointment-search button{
+        height: 45px;
+    }
     .what-we-provide{
         grid-template-columns: 1fr;
     }
@@ -1339,36 +1110,29 @@ footer{
     .story-numbers-box strong{
         font-size: 1.4rem;
     }
-}
-
-
-
-/******************************** CSS STYLINGS FOR MOBILE VIEW ***********************************/
-
-@media screen and (max-width:390px) {
-
-    nav{
-        padding:10px 3px;
+    .why-choose-us-right,
+    .why-choose-us-left{
+        padding: 30px 20px;
     }
-
-    .nav__links {
-        gap: 0.5rem;
-        font-size: small;
+    .why-choose-box-container{
+        grid-template-columns: 1fr;}
+    #subscribe h3{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
     }
-
-    .nav-head{
-        padding: 3px;
+    #subscribe{
+        padding: 20px;
     }
-
-    .btn{
-        padding: 12px;
-        font-size: medium;
-    }
-
-    .contact{
-        width: 290px;
+	 .footer-container{
+        grid-template-columns: 1fr;
     }
 }
-
-
-
+@media(max-width:320px){
+    .nav-appointment-btn{
+        display: none;
+    }
+    .story-numbers-container{
+        grid-template-columns: 1fr;
+    }
+}
+  

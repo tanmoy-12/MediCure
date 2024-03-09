@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add event listener for the service link
     serviceLink.addEventListener('click', function (event) {
         // Scroll to the insurance section
-        document.querySelector('.services').scrollIntoView({
+        document.querySelector('#our-services').scrollIntoView({
             behavior: 'smooth'
         });
         // Prevent default link behavior
@@ -103,3 +103,66 @@ function toggleDropdown() {
         header.textContent = 'Apollo Products';
     }
 }
+
+
+
+
+var swiper = new Swiper(".mySwiperservices", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      700: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+
+  
+document.querySelector('.hamburger-button').addEventListener('click', function() {
+document.querySelector('.nav-links').style.display = 
+(document.querySelector('.nav-links').style.display == 'none') ? 'block' : 'none';
+});
+
+/*--team--*/
+var swiper = new Swiper(".mySwiperteam", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      560: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      950: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1250: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+    },
+  });
+/*--testimonials--*/
+  var swiper = new Swiper(".mySwipertesti", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  document.getElementById("readMoreBtn").addEventListener("click", function() {
+var card = document.getElementById("card");
+card.classList.toggle("flipped");
+});

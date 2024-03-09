@@ -5,7 +5,11 @@
 }
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  background-color: #c8c5ff;
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  background: linear-gradient(rgba(250,250,250, 0.6),
+  rgba(250,250,250, 0.8)),url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8yNV9zaW1wbGVfM2RfaWxsdXN0cmF0aW9uX29mX2FfcmVjb3Zlcnlfcm9vbV93aV80ZjhkNDIwNC02N2I4LTQwMDQtYTBlNy05YjljMjIyMzE2ZGVfMS5qcGc.jpg');
 }
 .formbold-mb-5 {
   margin-bottom: 20px;
@@ -24,7 +28,7 @@ body {
   margin: 0 auto;
   max-width: 550px;
   width: 100%;
-  background: white;
+  background: rgb(235, 185, 185);
 }
 .formbold-form-label {
   display: block;

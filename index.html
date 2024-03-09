@@ -9,10 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!--==============================================  FONTS USED ============================================-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
     <!--============================================== FONT AWESOME STYLINGS ============================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  crossorigin="anonymous" />
     <!--============================================== EXTERNAL CSS FILE ============================================-->
     <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+    
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -23,12 +27,21 @@
 <body>
 
         <!--============================================== NAV-BAR CONTENT ============================================-->
-        <nav>
+        <nav class="navbar">
+            <button class="hamburger-button" id="mobile-view"> ☰ </button>
             <div class="nav-head">
                 <div class="nav__logo">MEDIcure</div>
                 <a href="login.html"> <button class="btn" id="mobile-view">Register Now</button></a>
             </div>
-            <ul class="nav__links">
+            
+            <div class="hamburger-menu" id="mobile-view">
+                <div class="nav-links">
+                    <a href="#" >Home</a>
+                    <a href="#" >Services</a>
+                    <a href="#" >Contact</a>
+                </div>
+             </div>
+            <ul class="nav__links" id="pc-view">
                 <li class="link"><a >Home</a></li>
                 <li class="link"><a href="#">About Us</a></li>
                 <li class="link"><a href="#">Insurance</a></li>
@@ -72,13 +85,13 @@
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="image/3.png" class="d-block w-100" alt="Ad 1">
+                <img src="image/3.png" class="d-block w-100" alt="Ad 1" style="border-radius: 6px;">
               </div>
               <div class="carousel-item">
-                <img src="image/1.png" class="d-block w-100" alt="Ad 2">
+                <img src="image/1.png" class="d-block w-100" alt="Ad 2" style="border-radius: 6px;">
               </div>
               <div class="carousel-item">
-                <img src="image/2.png" class="d-block w-100" alt="Ad 3">
+                <img src="image/2.png" class="d-block w-100" alt="Ad 3" style="border-radius: 6px;">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
@@ -211,7 +224,7 @@
 
         <!--============================================== ABOUT US SECTION ============================================-->
         <div class="about-us" id="about">
-            <div class="about-us-content">
+            <div class="about-us-content" style="border-radius: 6px;">
                 <h1>About Us</h1>
                 <p>
                     Welcome to MediCure, your trusted healthcare companion. At MediCure, we are dedicated to providing convenient 
@@ -245,7 +258,7 @@
         </div>
 
         <!--============================================== SERVICES OFFERED ============================================-->
-        <section id="our-services">
+        <section id="our-services" style="border-radius: 6px;">
 
             <!--**heading********************-->
             <div class="services-heading">
@@ -261,7 +274,7 @@
                 </div>
             </div>
     
-            <!--**container*******************-->
+            <!--************************Services container*********************-->
             <div class="services-box-container">
     
                  <!-- Swiper -->
@@ -333,6 +346,91 @@
         
         </section><!--services-end-->
 
+    <!--==Why-choose-us=======================-->
+    <section id="why-choose-us">
+
+        <!--**left*****************-->
+        <div class="why-choose-us-left">
+            <h3>Why Choose Us?</h3>
+            <!--==container====-->
+            <div class="why-choose-box-container">
+                <!--**box**-->
+                <div class="why-choose-box">
+                    <!--icon-->
+                    <i class="fa-solid fa-check"></i>
+                    <!--text-->
+                    <div class="why-choose-box-text">
+                        <strong>Advance Care</strong>
+                        <p>Lorem ipsum dolor sit</p>
+                    </div>
+                </div>
+                <!--**box**-->
+                <div class="why-choose-box">
+                    <!--icon-->
+                    <i class="fa-solid fa-check"></i>
+                    <!--text-->
+                    <div class="why-choose-box-text">
+                        <strong>Online Medicine</strong>
+                        <p>Lorem ipsum dolor sit</p>
+                    </div>
+                </div>
+                <!--**box**-->
+                <div class="why-choose-box">
+                    <!--icon-->
+                    <i class="fa-solid fa-check"></i>
+                    <!--text-->
+                    <div class="why-choose-box-text">
+                        <strong>Medical & Surgical</strong>
+                        <p>Lorem ipsum dolor sit</p>
+                    </div>
+                </div>
+                <!--**box**-->
+                <div class="why-choose-box">
+                    <!--icon-->
+                    <i class="fa-solid fa-check"></i>
+                    <!--text-->
+                    <div class="why-choose-box-text">
+                        <strong>Lab Test's</strong>
+                        <p>Lorem ipsum dolor sit</p>
+                    </div>
+                </div>
+            </div>
+            <!--==btn========-->
+            <a href="appointment.html" class="why-choose-us-btn">Make Appointment</a>
+        </div><!--left-end-->
+
+        <!--**right*******************-->
+        <div class="why-choose-us-right">
+            <h3>Emergency?<br/>
+                Contact Us
+            </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis iste, quam ratione rerum aliquid esse vero placeat? debitis velit cupiditate magni cumque corporis.</p>
+            <!--==container====-->
+            <div class="w-right-contact-container">
+                <!--**box**-->
+                <div class="w-right-contact-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <!--text-->
+                    <div class="w-right-contact-box-text">
+                        <span>Call Us Now</span>
+                        <strong>+123 4567 89</strong>
+                    </div>
+                </div>
+                <!--**box**-->
+                <div class="w-right-contact-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <!--text-->
+                    <div class="w-right-contact-box-text">
+                        <span>Mail Us</span>
+                        <strong>info@example.com</strong>
+                    </div>
+                </div>
+            </div>
+        </div><!--right-end-->
+
+    </section><!--end-->
+
+
 
         <!--============================================== TAG SECTION ============================================-->
         <div class="greet-container">
@@ -373,6 +471,129 @@
                 <p>Yes, we take the security of your personal information very seriously. Our platform uses the latest encryption technology to ensure that your data is protected at all times.</p>
             </details>
         </div>
+
+
+        <!---------------------CUSTOMER REVIEWS------------------------------->
+        <section id="testimonials">
+
+            <!--**heading****************-->
+            <div class="testimonials-heading">
+                <h3>Our Patients FeedBack About Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptates cupiditate, rerum rem odio fugit</p>
+            </div>
+    
+    
+            <!--**testimonials-Content****-->
+            <div class="testimonials-content">
+    
+                <!--**box-container**-->
+                <div class="testimonials-box-container">
+    
+                <!-- Swiper -->
+                <div class="swiper mySwipertesti">
+                <div class="swiper-wrapper">
+                    <!--**1***********-->
+                    <div class="swiper-slide">
+                    <!--**box**-->
+                    <div class="testimonials-box">
+                        <!--profile-->
+                        <div class="t-profile">
+                            <!--img-->
+                            <div class="t-profile-img">
+                                <img alt="" src="images/t1.jpg">
+                            </div>
+                            <!--text-->
+                            <div class="t-profile-text">
+                                <strong>Client Name</strong>
+                                <span>From China</span>
+                                <div class="t-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!--feedback-->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa est odit dicta sequi labore perferendis ut veritatis expedita, nihil sint! Delectus aut id voluptatibus nemo dolorum, quos consequatur commodi repudiandae?</p>
+                    </div><!--box-end-->
+                </div><!--slide-end-->
+    
+                <!--**2***********-->
+                <div class="swiper-slide">
+                    <!--**box**-->
+                    <div class="testimonials-box">
+                        <!--profile-->
+                        <div class="t-profile">
+                            <!--img-->
+                            <div class="t-profile-img">
+                                <img alt="" src="images/t1.jpg">
+                            </div>
+                            <!--text-->
+                            <div class="t-profile-text">
+                                <strong>Client Name</strong>
+                                <span>From China</span>
+                                <div class="t-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!--feedback-->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa est odit dicta sequi labore perferendis ut veritatis expedita, nihil sint! Delectus aut id voluptatibus nemo dolorum, quos consequatur commodi repudiandae?</p>
+                    </div><!--box-end-->
+                </div><!--slide-end-->
+    
+                <!--**3***********-->
+                <div class="swiper-slide">
+                    <!--**box**-->
+                    <div class="testimonials-box">
+                        <!--profile-->
+                        <div class="t-profile">
+                            <!--img-->
+                            <div class="t-profile-img">
+                                <img alt="" src="images/t1.jpg">
+                            </div>
+                            <!--text-->
+                            <div class="t-profile-text">
+                                <strong>Client Name</strong>
+                                <span>From China</span>
+                                <div class="t-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!--feedback-->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa est odit dicta sequi labore perferendis ut veritatis expedita, nihil sint! Delectus aut id voluptatibus nemo dolorum, quos consequatur commodi repudiandae?</p>
+                    </div><!--box-end-->
+                </div><!--slide-end-->
+                
+                </div><!--wrapper-end-->
+                <div class="swiper-pagination"></div>
+                </div><!--swiper-end-->
+    
+                </div><!--container-end-->
+            
+            </div><!--content-end-->
+    
+        </section><!--testimonials-end-->
+
+        <section id="subscribe">
+            <h3>Subscribe For New Updates From MEDIcare</h3>
+            <!--subcribe-box-->
+            <form class="subscribe-box">
+                <input type="email" placeholder="Example@gmail.com">
+                <button>Subscribe</button>
+            </form>
+        </section><!--end-->
         
 
         <!--============================================== GET IN TOUCH / CONTACTS SECTION ============================================-->
@@ -390,95 +611,116 @@
     </div>
     
     <!--============================================== FOOTER CONTENT ============================================-->
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="nav__logo">MEDIcure</div>
-        </div>
-        <div class="footer-link">
-            <h3>Connect With Us</h3>
-            <div class="socials">
-                <a href="">
-                    <div class="social-link">
-                        <i class="fa-brands fa-facebook"></i>
-                        <h6>Facebook</h6>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="social-link">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <h6>Linkedin</h6>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="social-link">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <h6>Whatsapp</h6>
-                    </div>
-                </a>
-                
+    <footer>
+        <div class="footer-container">
+            <!--**comoany-box**-->
+            <div class="footer-company-box">
+                <!--logo-->
+                <a href="#" class="logo"><span>MEDI</span>Care</a>
+                <!--details-->
+                <p>Empowering healthier lives through accessible and innovative healthcare solutions, MediCure is your trusted partner in wellness.</p>
+                <!--social-box-->
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
             </div>
+            <!--**link-box***-->
+            <div class="footer-link-box">
+                <strong>Main Link's</strong>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </div>
+            <!--**link-box***-->
+            <div class="footer-link-box">
+                <strong>External Link's</strong>
+                <ul>
+                    <li><a href="#">Our Product's</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Trem's and Condition's</a></li>
+                </ul>
+            </div>
+            <!--**link-box***-->
+            <div class="footer-link-box">
+                <strong>External Link's</strong>
+                <ul>
+                    <li><a href="#">Our Product's</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Trem's and Condition's</a></li>
+                </ul>
+            </div>
+            
+   
         </div>
-        <div class="footer-info">
-            <p>&copy; 2024 MediCure. All rights reserved.</p>
-            <p>Designed by Phoenix</p>
+
+        <!--**bottom**********************-->
+        <div class="footer-bottom">
+            <span class="footer-owner">PHOENIX</span>
+            <span class="copyright">&#169; Copyright 2022 -  PHOENIX</span>
         </div>
-    </div>
+    </footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-    /*-services--*/
-    var swiper = new Swiper(".mySwiperservices", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          700: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-        },
-      });
-    /*--team--*/
-    var swiper = new Swiper(".mySwiperteam", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          560: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          950: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1250: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-        },
-      });
-    /*--testimonials--*/
-      var swiper = new Swiper(".mySwipertesti", {
-        pagination: {
-          el: ".swiper-pagination",
-        },
-      });
-    </script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCokyFRkjV-5Pcv1p2cYvzKkdkeYQN0qu8",
+          authDomain: "medicure-d1a61.firebaseapp.com",
+          databaseURL: "https://medicure-d1a61-default-rtdb.firebaseio.com",
+          projectId: "medicure-d1a61",
+          storageBucket: "medicure-d1a61.appspot.com",
+          messagingSenderId: "1037227071455",
+          appId: "1:1037227071455:web:59fb55f1edc0993bbb566a",
+          measurementId: "G-YHYS4E73XQ"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+      <script>
+        var swiper = new Swiper(".mySwiperservices", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      700: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+
+      </script>
 
     
 </body>
