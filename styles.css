@@ -1132,6 +1132,10 @@ input{
         max-width: 87%;
     }
 
+    .testimonials-content{
+        padding-top: 450px;
+    }
+
     #our_story{
         grid-template-columns: 1fr;
     }

@@ -119,7 +119,10 @@
         .then((userCredential) => {
             // Signed up 
             const user = userCredential.user;
-            // ...
+            
+            username: username;
+            email: email;
+
             alert("User Created");
         })
         .catch((error) => {
