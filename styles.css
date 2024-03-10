@@ -1229,6 +1229,11 @@ input{
     .story-numbers-box strong{
         font-size: 1.4rem;
     }
+
+    .testimonials-content{
+        padding-top: 500px;
+    }
+    
 }
 
 
@@ -1257,6 +1262,10 @@ input{
 
     .contact{
         width: 290px;
+    }
+
+    .testimonials-content{
+        padding-top: 660px;
     }
 }
 
